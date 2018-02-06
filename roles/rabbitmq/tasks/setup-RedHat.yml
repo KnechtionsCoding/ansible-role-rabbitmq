@@ -3,9 +3,11 @@
   rpm_key:
     key: "https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc"
     state: present
+  become: true
 
 - name: Install RabbitMQ from RabbitMQ Repository
   yum:
     name: "{{ rabbitmq_rpm_url }}"
     state: present
+  become: true
 

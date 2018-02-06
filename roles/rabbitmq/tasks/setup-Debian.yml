@@ -3,3 +3,4 @@
   apt:
     deb: "{{ rabbitmq_deb_url }}"
     state: present
+  become: true

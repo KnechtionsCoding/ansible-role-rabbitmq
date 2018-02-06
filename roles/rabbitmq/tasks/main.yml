@@ -3,6 +3,7 @@
   package:
     name: erlang
     state: present
+  become: true
 
 # Setup/install tasks.
 - include: setup-RedHat.yml
@@ -16,3 +17,4 @@
     name: "{{ rabbitmq_daemon }}"
     state: "{{ rabbitmq_state }}"
     enabled: "{{ rabbitmq_enabled }}"
+  become: true
